@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "317f2c3cd8704059d86c7bc33032f3d5",
-    "content-hash": "57322404e4934daea0705d3cc308e1b0",
+    "hash": "2f1db7e1350fd67b04e06a907be53fe3",
+    "content-hash": "372dab93e4d5e6d01889888e3a88a9e4",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -813,6 +813,124 @@
                 "orm"
             ],
             "time": "2016-12-18 15:42:34"
+        },
+        {
+            "name": "filp/whoops",
+            "version": "2.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filp/whoops.git",
+                "reference": "2abce9d956589122c6443d6265f01cf7e9388e3c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/2abce9d956589122c6443d6265f01cf7e9388e3c",
+                "reference": "2abce9d956589122c6443d6265f01cf7e9388e3c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9 || ^7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "^4.8 || ^5.0",
+                "symfony/var-dumper": "^2.6 || ^3.0"
+            },
+            "suggest": {
+                "symfony/var-dumper": "Pretty print complex values better with var-dumper available",
+                "whoops/soap": "Formats errors as SOAP responses"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Whoops\\": "src/Whoops/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Filipe Dobreira",
+                    "homepage": "https://github.com/filp",
+                    "role": "Developer"
+                }
+            ],
+            "description": "php error handling for cool kids",
+            "homepage": "https://filp.github.io/whoops/",
+            "keywords": [
+                "error",
+                "exception",
+                "handling",
+                "library",
+                "whoops",
+                "zf2"
+            ],
+            "time": "2016-12-26 16:13:31"
+        },
+        {
+            "name": "ghislainf/zf2-whoops",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ghislainf/zf2-whoops.git",
+                "reference": "2649cf7caf400409942ddc3f8fe15b89381fc74e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ghislainf/zf2-whoops/zipball/2649cf7caf400409942ddc3f8fe15b89381fc74e",
+                "reference": "2649cf7caf400409942ddc3f8fe15b89381fc74e",
+                "shasum": ""
+            },
+            "require": {
+                "filp/whoops": "2.*",
+                "php": ">=5.3.3",
+                "zendframework/zend-config": "*",
+                "zendframework/zend-console": "*",
+                "zendframework/zend-eventmanager": "*",
+                "zendframework/zend-mvc": "*"
+            },
+            "type": "module",
+            "autoload": {
+                "psr-0": {
+                    "zf2-whoops": "src/"
+                },
+                "classmap": [
+                    "./Module.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Balázs Németh",
+                    "email": "zsilbi@zsilbi.hu"
+                },
+                {
+                    "name": "Ghislain de Fontenay",
+                    "homepage": "http://www.ghislainf.me/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Filipe Dobreira",
+                    "homepage": "https://github.com/filp"
+                },
+                {
+                    "name": "Andreas Frömer",
+                    "homepage": "https://github.com/icanhazstring"
+                }
+            ],
+            "description": "PHP whoops error on ZF2 framework",
+            "homepage": "https://github.com/ghislainf/zf2-whoops",
+            "time": "2016-06-06 08:41:08"
         },
         {
             "name": "psr/http-message",
@@ -4961,7 +5079,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "zendframework/zend-component-installer": 20
+        "zendframework/zend-component-installer": 20,
+        "ghislainf/zf2-whoops": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

@@ -28,7 +28,8 @@
         "zendframework/zend-session": "^2.7.1",
         "zendframework/zend-servicemanager-di": "^1.0",
         "doctrine/doctrine-orm-module": "^1.1",
-        "doctrine/orm": "^2.5"
+        "doctrine/orm": "^2.5",
+        "ghislainf/zf2-whoops": "dev-master"
     },
     "autoload": {
         "psr-4": {

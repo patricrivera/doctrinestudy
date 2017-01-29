@@ -9,9 +9,13 @@ namespace Application;
 
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
-use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
+    'controllers' => [
+        'factories' => [
+            Controller\IndexController::class => Factory\IndexFactory::class
+        ],
+    ],
     'router' => [
         'routes' => [
             'home' => [
@@ -36,11 +40,6 @@ return [
             ],
         ],
     ],
-    'controllers' => [
-        'factories' => [
-            Controller\IndexController::class => InvokableFactory::class,
-        ],
-    ],
     'view_manager' => [
         'display_not_found_reason' => true,
         'display_exceptions'       => true,
@@ -62,7 +61,7 @@ return [
             __NAMESPACE__ . '_driver' => array(
                 'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
                 'cache' => 'array',
-                'paths' => array(__DIR__ . '/../src/' . __NAMESPACE__ . '/Entity')
+                'paths' => array(__DIR__ . '/../src/Entity')
             ),
             'orm_default' => array(
                 'drivers' => array(
